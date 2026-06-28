@@ -3,33 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مفاجأة لست البنات ❤️</title>
+    <title>مفاجأة لنونو ❤️</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffe6e6; text-align: center; margin: 0; padding: 20px; color: #4a0e17; }
-        .box { background: white; max-width: 450px; margin: 30px auto; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        h1 { color: #ff4d6d; font-size: 24px; }
-        input[type="password"] { width: 80%; padding: 12px; margin: 15px 0; border: 2px solid #ffb3c1; border-radius: 10px; text-align: center; font-size: 18px; }
-        button { background-color: #ff4d6d; color: white; border: none; padding: 12px 25px; border-radius: 10px; cursor: pointer; font-size: 18px; font-weight: bold; }
-        button:hover { background-color: #c71585; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #fff0f3; 
+            background-image: radial-gradient(#ffccd5 20%, transparent 20%), radial-gradient(#ffccd5 20%, transparent 20%);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            text-align: center; 
+            margin: 0; 
+            padding: 20px; 
+            color: #4a0e17; 
+        }
+        .box { 
+            background: rgba(255, 255, 255, 0.95); 
+            max-width: 450px; 
+            margin: 30px auto; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(255, 77, 109, 0.2); 
+            border: 3px solid #ffb3c1;
+            position: relative;
+        }
+        /* إضافة زهور ديكور حول الصندوق */
+        .box::before { content: "🌸"; position: absolute; top: -15px; left: -15px; font-size: 30px; }
+        .box::after { content: "🌹"; position: absolute; bottom: -15px; right: -15px; font-size: 30px; }
+        
+        h1 { color: #ff4d6d; font-size: 26px; margin-bottom: 20px; }
+        .rose-title { font-size: 28px; color: #ff4d6d; font-weight: bold; }
+        
+        input[type="password"] { 
+            width: 80%; 
+            padding: 12px; 
+            margin: 15px 0; 
+            border: 2px solid #ffb3c1; 
+            border-radius: 10px; 
+            text-align: center; 
+            font-size: 18px; 
+            outline: none;
+        }
+        input[type="password"]:focus { border-color: #ff4d6d; box-shadow: 0 0 5px rgba(255, 77, 109, 0.5); }
+        
+        button { 
+            background-color: #ff4d6d; 
+            color: white; 
+            border: none; 
+            padding: 12px 35px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            font-size: 18px; 
+            font-weight: bold; 
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+        }
+        button:hover { background-color: #c71585; transform: scale(1.05); }
         #content { display: none; }
         
         /* استايل ألبوم الصور */
         .photo-album { margin: 20px 0; }
-        .photo-album img { width: 100%; max-width: 350px; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+        .photo-album img { width: 100%; max-width: 350px; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); border: 2px solid #fff; }
         
         .message { font-size: 20px; line-height: 1.8; margin-top: 20px; white-space: pre-line; font-weight: 500; border-top: 2px dashed #ffb3c1; padding-top: 15px; }
     </style>
 </head>
 <body>
 
-    <!-- صفحة الباسوورد -->
+    <!-- صفحة الباسوورد بالورد والتعديلات الجديدة -->
     <div id="login-box" class="box">
-        <h1>🔒 ♥️بموت فيكي ي نونو </h1>
-        <p>اكتبي الكلمة السرية عشان تشوفي المفاجأة:</p>
+        <div class="rose-title">🌹 بموت فيكي ي نونو 🌹</div>
+        <p style="font-size: 18px; margin-top: 15px;">اكتبي الباسورد:</p>
         <input type="password" id="password" placeholder="اكتبي الباسوورد هنا...">
         <br>
         <button onclick="checkPassword()">NEXT ❤️</button>
-        <p id="error" style="color: red; display: none; margin-top: 15px; font-weight: bold;">الباسوورد غلط يا ملكتي! فكري تاني 😉</p>
+        <p id="error" style="color: red; display: none; margin-top: 15px; font-weight: bold;">الباسوورد غلط يا ملكتي! فكري تاني 😉🌸</p>
     </div>
 
     <!-- صفحة المصالحة المليانة صور وأغاني -->
@@ -55,7 +102,7 @@
 
         <!-- رسالتك الشخصية -->
         <div class="message">
-           بحبك وبموت فيكي وبعشق امك انا عارف اني زعلتك بس نا مقدرش ع زعلك ونا مليش غيرك وبحبك ف حقك عليا متزعليش♥️♥️💋
+             بحبك وبموت فيكي وبعشق امك انا عارف اني زعلتك بس نا مقدرش ع زعلك ونا مليش غيرك وبحبك ف حقك عليا متزعليش♥️♥️💋
         </div>
     </div>
 
